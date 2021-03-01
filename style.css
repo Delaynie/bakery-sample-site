@@ -225,12 +225,17 @@ background-position: left;
         font-size: 2rem;
       }
       
-        /*@media(max-width:768px) {
+        @media(max-width:768px) {
          .email-signup input {
            width: 100%;
            max-width: 100%;
          }
-       }*/
+        }
+         @Media(max-width: 768px) {
+            .email-signup .button-solid {
+                height: auto;
+         }
+       }
 
 
   /* Media Queries */
@@ -253,6 +258,12 @@ background-position: left;
   
     .banner {
       min-height: 50vh;
+    }
+
+    header a {
+        padding: 0;
+        display: inline-block;
+        font-size: .8rem;
     }
   
     h2 {
