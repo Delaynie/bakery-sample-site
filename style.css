@@ -234,6 +234,8 @@ background-position: left;
          @Media(max-width: 768px) {
             .email-signup .button-solid {
                 height: auto;
+                border: none;
+                color: white;
          }
        }
 
@@ -261,9 +263,13 @@ background-position: left;
     }
 
     header a {
-        padding: 0;
+        padding: 2% 0 2% 0;
         display: inline-block;
         font-size: .8rem;
+    }
+    
+    header {
+        padding-top: 5%;
     }
   
     h2 {
