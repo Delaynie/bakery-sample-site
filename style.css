@@ -221,19 +221,16 @@ background-position: left;
       }
       
       .email-signup .button-solid {
-        padding: 0.8em;
-        border-radius: 0;
-        font-size: 1rem;
+        padding: 2%;
+        font-size: 2rem;
       }
-      form .button {
-        width:100%;
-      }
-        @media(max-width:768px) {
+      
+        /*@media(max-width:768px) {
          .email-signup input {
            width: 100%;
            max-width: 100%;
          }
-       }
+       }*/
 
 
   /* Media Queries */
@@ -251,24 +248,11 @@ background-position: left;
     }
   
     .bg-image {
-      padding-bottom: 50%;
+      padding-bottom: 60%;
     }
   
     .banner {
-      min-height: 60vh;
-    }
-    .banner h3 {
-      font-size: 3rem;
-    }
-    .banner h3 {
-      position: absolute;
-      right: 1%;
-      top: 17%;
-    }
-    .banner h2 {
-      position: absolute;
-      right: 1%;
-      top: 22%;
+      min-height: 50vh;
     }
   
     h2 {
