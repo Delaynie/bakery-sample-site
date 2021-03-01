@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+  <!--  This is the head section where we add external resources and links  -->
+  <head>
+
+    <title> Bevvy's Bakery </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- this is gridlex for our grid layouts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+
+    <!-- Google fonts -- might use these for the cookie jar/bakery page --> 
+    <!-- 300 - light, 400 - regular, 700- bold, 900 - black -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900" rel="stylesheet">
+
+    <!-- this is the icon font, fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Form Spree button 
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  formbutton("create", {action: "https://formspree.io/f/xrgoweyq"})
+</script> -->
+    
+    <!-- This is our custom stylesheet, it always goes last -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- This adds jquery and smooth scrolling! -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="scripts.js"></script>
+
+  </head>
+
+  <!-- This is the main content of the page -->
+  <body id="body">
+
+      <!-- this is our main header -->
+      <header class="grid-spaceAround">
+        <nav class="col-3-middle left">
+          <a href="#about"> about </a>
+          <a href="#specials"> specials </a>
+        </nav>
+        <div class="col-6-middle centered">
+          <a href="/">
+            <h2 class="logo"> Bevvy's Bakery </h2>
+          </a>
+        </div>
+        <nav class="col-3-middle right">
+          <a href="#location"> location </a>
+          <a href="#social"> social </a>
+        </nav>
+      </header>
+
+      <!-- this is our intro banner section -->
+      
+      <section class="banner padded centered grid bg-bakery">
+        <div class="col-12-middle">
+          <h3>  </h3>
+          <h2>  </h2>
+        </div>
+      </section>
+
+      <!-- this is our first text + image section -->
+      <section class="grid reverse-on-mobile" id="about">
+        <div class="col-6_sm-12 bg-image bg-puppy" style="background-image:url('images/miti.jpg')">
+
+        </div>
+        <div class="col-6_sm-12 padded">
+          <h2> Downtown's Fav since 2015 </h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+      
+
+      <!-- this is our second text + image section -->
+      <section class="grid">
+        <div class="col-6_sm-12 padded">
+          <h2> Cookies so soft you'll melt </h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-6_sm-12 bg-image" style="background-image:url('images/mae-mu.jpg')">
+
+        </div>
+      </section>
+      
+
+      <!-- this is our CTA section -->
+      <section class="centered padded bg-light" id="specials">
+        <h2> Subscribe Now </h2>
+        <p> We'll keep you updated with our daily and weekly specials! We may even send out a coupon or two... or three. ;) </p>
+      
+        <form class="email-signup" action="https://formspree.io/your@email.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name">
+          <input type="email" name="_replyto" placeholder="Your Email">
+          <input type="submit" value="Send" class="button-solid">
+        </form>
+      
+      </section>
+
+      <!-- pop up gallery -->
+      <section class="padded centered">
+
+        <h2> Mouthwatering Pics from our Socials </h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+          <div class="popup-gallery grid-center padded-1">
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/otto-norin.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/otto-norin.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/nadya-spetnitskaya.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/nadya-spetnitskaya.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/jonathan-taylor.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/jonathan-taylor.jpg')"></div>
+            </a>
+
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/daniel-hooper.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/daniel-hooper.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/artur-rutkowski.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/artur-rutkowski.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/helena-yankovska.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/helena-yankovska.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/sharon-mccutcheon-Ru.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/sharon-mccutcheon-Ru.jpg')"></div>
+            </a>
+        
+            <a class="col-3_sm-6_xs-12 fancybox" href="/images/austin-ban.jpg" data-fancybox="gallery">
+              <div class="bg-image square" style="background-image:url('/images/austin-ban.jpg')"></div>
+            </a>
+        
+          </div>
+        
+        </section>
+
+      <!-- this is our location section -->
+      <section class="grid-left banner bg-wood" id="location">
+        <div class="col-6_sm-12-middle padded">
+          <h2> Visit Us </h2>
+          <p class="emphasis"> 
+            <span> Hours: 5am - 10pm Tuesday through Sunday </span> <br>
+            <span> Address: 256 Main, Unit #2 New York </span> <br>
+            <span> Phone: 555-555-5555 </span> <br>
+           </p>
+          <a href="#" class="button-solid padded-2"> Get Directions </a>
+        </div>
+      </section>
+
+      <!-- this is our footer -->
+      <footer class="grid bg-dark" id="social">
+        <!-- column -->
+        <div class="col-5_sm-12 padded">
+          <h2 class="logo"> Bevvy's Bakery </h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="col-1 sm-hidden"></div>
+        <!-- column -->
+        <div class="col-6_sm-12-middle padded right">
+          <nav class="inline">
+            <a href="#"> Lorem ipsum </a>|
+            <a href="#"> Dolor sit </a>|
+            <a href="#"> Consectetur </a>
+          </nav>
+          <nav class="inline socials">
+            <a href="#">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </nav> <br>
+          <p>This site is a RadFox&copy; creation 2021 all rights reserved.</p>
+          </div>
+      </footer>
+
+      
+  </body>
+</html>

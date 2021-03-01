@@ -1,0 +1,291 @@
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Utility Classes */
+  
+  .padded     { padding: 5%;  }
+  .padded-1 {  padding: 1rem;  }
+  .padded-2 {  padding: 2%;  }
+
+  .emphasis {
+    font-size: 1.2rem;
+  }
+
+  .bg-light { background-color: rgb(216, 206, 199); }
+  
+  .bg-dark {
+    background-color: rgb(70, 63, 58);
+    color: white;
+  }
+  
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(216, 206, 199);
+  }
+
+  .bg-bakery {
+    background-image:url('/images/wesual-click.jpg');
+    position: center;
+  }
+  
+  .button-solid {
+    color: white;
+    background-color: rgb(13, 145, 35);
+    border-color:rgb(13, 145, 35);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button-solid:hover {
+    background-color: rgb(60, 60, 60);
+    border-color: rgb(60, 60, 60);
+  }
+  
+  /* Universal Element Styles */
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    color: rgb(60,60,65);
+    background-color: rgb(243, 238, 233);
+  }
+  
+  h2, h3, h4 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* header & footer */
+  header {
+    padding: 1% 5%;
+  }
+  
+  header a {
+      text-decoration: none;
+      color: inherit;
+      padding: 0.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  header a:hover {
+    color: rgb(120,120,125);
+  }
+  header h1 {
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  
+  footer a {
+      text-decoration: none;
+      color: inherit;
+      padding: 0.5rem;
+      font-weight: bold;
+      display: inline-block;
+  }
+  
+  footer a:hover {
+    color: rgb(228, 67, 19);
+  }
+  
+  footer .fab {
+    font-size: 2rem;
+  }
+  
+  
+  
+  /* ------------ Banner ---------- */
+  
+  .banner {
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    color: rgb(253, 253, 253);
+    opacity: .9;
+  }
+  
+  .banner h3 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  
+  .banner h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+  
+  /* This prevents the sections from having a blue outline when we click to them from the menu */
+  
+  section:focus,
+  footer:focus  {
+    outline: none;
+  }
+ 
+  .logo {
+      text-transform: capitalize;
+  }
+  
+  /* Pop up gallery css */
+  
+  .square {
+    padding-bottom: 100%;
+  }
+  
+  .popup-gallery .bg-image {
+    border: 2px solid white;
+  }
+
+  /* location css */
+  
+
+.bg-wood {
+background-image: url('/images/ales-krivec.jpg');
+background-position: left;
+}
+
+  /* custom footer css */
+
+  .inline a {
+    display:inline-block;
+    padding: 0.5rem;
+  }
+
+  /* ------------- Utility Classes from IOC Modular --------------  */
+  
+    .left     {  text-align: left;     }
+    .right    {  text-align: right;    }
+    .centered {  text-align: center;   }
+  
+      hr { /* this is a line element */
+      border: none;
+      border-bottom: 3px solid;
+      width: 4rem;
+      margin-bottom: 1rem;
+      }
+
+
+      /* Form Subscription CSS */
+
+      input {
+        border-style: solid;
+        border: 2px solid rgb(200, 200, 205);
+        padding: 0.8em;
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        
+      }
+      
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border: 2px solid #e67e22;
+        /* featured color */
+      }
+      
+      textarea {
+        min-height: 7em;
+      }
+      
+      input[type="submit"] {
+        width: auto;
+        display: block;
+      }
+      
+      form [class*=col-] {
+        padding: 5px;
+      }
+      
+      .email-signup input {
+        width: 30%;
+        display: inline-block;
+        max-width: 250px;
+        margin-top:1rem;
+      }
+      
+      .email-signup .button-solid {
+        padding: 0.8em;
+        border-radius: 0;
+        font-size: 1rem;
+      }
+      form .button {
+        width:100%;
+      }
+        @media(max-width:768px) {
+         .email-signup input {
+           width: 100%;
+           max-width: 100%;
+         }
+       }
+
+
+  /* Media Queries */
+  
+  @media(max-width:768px) {
+  
+    /* you can add this class to any element that you want to hide on mobile. We've used a selector that includes the id of the body to ensure that this is a very specific selector and we don't have any specificity issues */
+    #body .mobile-hide {
+      display: none;
+    }
+  
+    /* add the class to the parent container, the one that has the 'grid' class, of columns that you want to reverse on mobile. So if you have 4 sections with 2 columns each you would add it to every second section. */
+    .reverse-on-mobile {
+      flex-direction: column-reverse;
+    }
+  
+    .bg-image {
+      padding-bottom: 50%;
+    }
+  
+    .banner {
+      min-height: 60vh;
+    }
+    .banner h3 {
+      font-size: 3rem;
+    }
+    .banner h3 {
+      position: absolute;
+      right: 1%;
+      top: 17%;
+    }
+    .banner h2 {
+      position: absolute;
+      right: 1%;
+      top: 22%;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    .center {
+      text-align:left;
+    }
+  
+    .mobile-hide {
+      display: none;
+    }
+  
+  }
