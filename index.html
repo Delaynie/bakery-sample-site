@@ -39,7 +39,23 @@
   <body id="body">
 
       <!-- this is our main header -->
-      <header class="grid">
+      <header class="grid mobile-hide">
+        <nav class="col-3-middle left">
+          <a href="#about"> about </a>
+          <a href="#specials"> specials </a>
+        </nav>
+        <div class="col-6-middle centered">
+          <a href="/">
+            <h2 class="logo"> Bevvy's Bakery </h2>
+          </a>
+        </div>
+        <nav class="col-3-middle right">
+          <a href="#location"> location </a>
+          <a href="#social"> social </a>
+        </nav>
+      </header>
+
+      <header class="grid mobile-display bg-dark">
         <nav class="col-3-middle left">
           <a href="#about"> about </a>
           <a href="#specials"> specials </a>
@@ -81,8 +97,8 @@
 
         </div>
         <div class="col-6_sm-12 padded">
-          <h2> Downtown's Fav Since 2015 </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h2 class="padded-mobile"> Downtown's Fav Since 2015 </h2>
+          <p class="padded-mobile"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </section>
       
@@ -90,8 +106,8 @@
       <!-- this is our second text + image section -->
       <section class="grid">
         <div class="col-6_sm-12 padded">
-          <h2> Cookies so warm you'll melt </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h2 class="padded-mobile"> Cookies so warm you'll melt </h2>
+          <p class="padded-mobile"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="col-6_sm-12 bg-image" style="background-image:url('images/mae-mu.jpg')">
 
@@ -101,8 +117,8 @@
 
       <!-- this is our CTA section -->
       <section class="centered padded bg-light" id="specials">
-        <h2> Subscribe Now </h2>
-        <p> We'll keep you updated with our daily and weekly specials! We may even send out a coupon or two... or three. ;) </p>
+        <h2 class="padded-mobile"> Subscribe Now </h2>
+        <p class="padded-mobile"> We'll keep you updated with our daily and weekly specials! We may even send out a coupon or two... or three. ;) </p>
       
         <form class="email-signup" action="https://formspree.io/your@email.com" method="POST">
           <input type="text" name="name" placeholder="Your Name">
@@ -115,41 +131,41 @@
       <!-- pop up gallery -->
       <section class="padded centered">
 
-        <h2> Mouthwatering Pics from our Socials </h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <h2 class="padded-mobile"> Mouthwatering Pics from our Socials </h2>
+        <p class="padded-mobile"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         
           <div class="popup-gallery grid-center padded-1">
         
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/otto-norin.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/otto-norin.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/otto-norin.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/nadya-spetnitskaya.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/nadya-spetnitskaya.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/nadya-spetnitskaya.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox mobile-hide" href="/images/jonathan-taylor.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/jonathan-taylor.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/jonathan-taylor.jpg')"></div>
             </a>
 
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/daniel-hooper.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/daniel-hooper.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/daniel-hooper.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/artur-rutkowski.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/artur-rutkowski.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/artur-rutkowski.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox mobile-hide" href="/images/helena-yankovska.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/helena-yankovska.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/helena-yankovska.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/sharon-mccutcheon-Ru.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/sharon-mccutcheon-Ru.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/sharon-mccutcheon-Ru.jpg')"></div>
             </a>
         
             <a class="col-3_sm-6_xs-12 fancybox" href="/images/austin-ban.jpg" data-fancybox="gallery">
-              <div class="bg-image square" style="background-image:url('/images/austin-ban.jpg')"></div>
+              <div class="bg-image square margin" style="background-image:url('/images/austin-ban.jpg')"></div>
             </a>
         
           </div>
@@ -160,13 +176,13 @@
       
       <section class="grid-left banner bg-wood" id="location">
         <div class="col-6_sm-12-middle overlay padded">
-          <h2> Visit Us </h2>
-          <p class="emphasis"> 
-            <span> Hours: 5am - 10pm Tuesday through Sunday </span> <br>
-            <span> Address: 256 Main, Unit #2 New York </span> <br>
-            <span> Phone: 555-555-5555 </span> <br>
+          <h2 style="opacity: 1; color: rgb(39, 19, 1);"> Visit Us </h2>
+          <p class="emphasis" style="opacity: 1; color: rgb(39, 19, 1);"> 
+            <span> <strong> Hours: </strong> 5am - 10pm Tuesday through Sunday </span> <br>
+            <span> <strong> Address: </strong> 256 Main, Unit #2 New York </span> <br>
+            <span> <strong> Phone: </strong> 555-555-5555 </span> <br>
            </p>
-          <a href="#" class="button-solid padded-2"> Get Directions </a>
+          <a class="button-solid padded-2" href="#"> Get Directions </a>
         </div>
       </section>
       
@@ -175,18 +191,18 @@
       <footer class="grid bg-dark" id="social">
         <!-- column -->
         <div class="col-5_sm-12 padded">
-          <h2 class="logo"> Bevvy's Bakery </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <h2 class="logo padded-mobile"> Bevvy's Bakery </h2>
+          <p class="padded-mobile"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
         <div class="col-1 sm-hidden"></div>
         <!-- column -->
         <div class="col-6_sm-12-middle padded right">
-          <nav class="inline">
+          <nav class="inline padded-mobile">
             <a href="#"> Lorem ipsum </a>|
             <a href="#"> Dolor sit </a>|
             <a href="#"> Consectetur </a>
           </nav>
-          <nav class="inline socials">
+          <nav class="inline socials padded-mobile">
             <a href="#">
               <i class="fab fa-facebook-square"></i>
             </a>
@@ -197,7 +213,7 @@
               <i class="fab fa-youtube"></i>
             </a>
           </nav> <br>
-          <p>This sample built by Delaynie Wheeler; 2021 all rights reserved.</p>
+          <p class="padded-mobile">Sample site built by Delaynie Wheeler; 2021 all rights reserved.</p>
           </div>
       </footer>
 
