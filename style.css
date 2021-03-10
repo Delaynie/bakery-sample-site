@@ -182,7 +182,11 @@ height: auto;
     padding: 0.5rem;
   }
 
-  /* ------------- Utility Classes from IOC Modular --------------  */
+  #body .mobile-display {
+    display: none;
+  }
+
+  /* ------------- Utility Classes --------------  */
   
     .left     {  text-align: left;     }
     .right    {  text-align: right;    }
