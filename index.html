@@ -24,14 +24,49 @@
   window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
   formbutton("create", {action: "https://formspree.io/f/xrgoweyq"})
 </script> -->
-    
-    <!-- This is our custom stylesheet, it always goes last -->
-    <link href="style.css" rel="stylesheet">
-
 
     <!-- This adds jquery and smooth scrolling! -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="scripts.js"></script>
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+      </script>
+
+      <style>
+        .container {
+          display: inline-block;
+          cursor: pointer;
+          position: fixed;
+          top: 20%;
+          right: 5%;
+        }
+        
+        .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #333;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+        
+        .change .bar1 {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        
+        .change .bar2 {opacity: 0;}
+        
+        .change .bar3 {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+        }
+        </style>
+
+        <!-- This is our custom stylesheet, it always goes last -->
+    <link href="style.css" rel="stylesheet">
+
 
   </head>
 
@@ -39,50 +74,28 @@
   <body id="body">
 
       <!-- this is our main header -->
-      <header class="grid mobile-hide">
-        <nav class="col-3-middle left">
+      <header class="grid">
+        <!--<nav class="col-3-middle left">
           <a href="#about"> about </a>
           <a href="#specials"> specials </a>
-        </nav>
+        </nav>-->
         <div class="col-6-middle centered">
           <a href="/">
             <h2 class="logo"> Bevvy's Bakery </h2>
           </a>
         </div>
-        <nav class="col-3-middle right">
+        <!--<nav class="col-3-middle right">
           <a href="#location"> location </a>
-          <a href="#social"> social </a>
-        </nav>
+          <a href="#social"> socials </a>
+        </nav>-->
       </header>
 
-      <header class="grid mobile-display bg-dark">
-        <nav class="col-3-middle left">
-          <a href="#about"> about </a>
-          <a href="#specials"> specials </a>
-        </nav>
-        <div class="col-6-middle centered">
-          <a href="/">
-            <h2 class="logo"> Bevvy's Bakery </h2>
-          </a>
-        </div>
-        <nav class="col-3-middle right">
-          <a href="#location"> location </a>
-          <a href="#social"> social </a>
-        </nav>
-      </header>
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
 
-      <!-- mobile header --> <!--
-      <header class="centered">
-        <a href="/">
-          <h2 class="logo padded-1"> Bevvy's Bakery </h2>
-        </a>
-        <nav>
-          <a href="#"> about </a>
-          <a href="#"> social </a>
-          <a href="#"> specials </a>
-          <a href="#"> locations </a>
-        </nav>
-        </header>-->
 
       <!-- this is our intro banner section -->
       
