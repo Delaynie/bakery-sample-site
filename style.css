@@ -77,31 +77,7 @@
     line-height: 1.4;
   }
   
-  /* header & footer */
-  header {
-    padding: 1% 5%;
-  }
-  
-  header a {
-      text-decoration: none;
-      color: inherit;
-      padding: 0.5rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: rgb(0, 0, 0);
-  }
-  header a:hover {
-    font-size: 18px;
-  }
-
-  .logo:hover {
-    text-transform: uppercase;
-  }
-
-  header h1 {
-    text-transform: uppercase;
-    font-weight: lighter;
-  }
+  /* header */
   
   footer a {
       text-decoration: none;
@@ -112,33 +88,26 @@
   }
   
   footer a:hover {
-    color: rgb(228, 67, 19);
+    color: rgb(228, 120, 19);
   }
   
   footer .fab {
     font-size: 2rem;
   }
   
-  
-  
   /* ------------ Banner ---------- */
-  
   .banner {
+    background-size: cover;
+    z-index: 0;
+    min-height: 60vh;
+    color: rgb(253, 253, 253);
+  }
+  .banner2 {
     background-size: cover;
     background-position: center;
     min-height: 60vh;
     color: rgb(253, 253, 253);
     opacity: .9;
-  }
-  
-  .banner h3 {
-    font-size: 4rem;
-    margin-bottom: 0;
-  }
-  
-  .banner h2 {
-    font-size: 1.8rem;
-    font-weight: normal;
   }
   
   /* This prevents the sections from having a blue outline when we click to them from the menu */
@@ -149,7 +118,12 @@
   }
  
   .logo {
-      text-transform: capitalize;
+    padding: 2% 2% 1% 5%;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+  }
+  .logo:hover {
+    font-size: 45px;
   }
   
   /* Pop up gallery css */
@@ -182,10 +156,6 @@ height: auto;
     padding: 0.5rem;
   }
 
-  #body .mobile-display {
-    display: none;
-  }
-
   /* ------------- Utility Classes --------------  */
   
     .left     {  text-align: left;     }
@@ -215,21 +185,15 @@ height: auto;
       input:focus,
       textarea:focus {
         outline: none;
-        border: 2px solid #02a30f;
-        /* featured color */
+        border: 2px solid #f06d01;
+        
       }
-      
-      
       
       input[type="submit"] {
         width: auto;
         display: inline-block;
         border: none;
       }
-      
-      /*form [class*=col-] {
-        padding: 5px;
-      }*/
       
       .email-signup input {
         width: 30%;
@@ -313,18 +277,4 @@ height: auto;
 
   .margin {  margin: 3%;  }
 
-  #body .mobile-hide {
-    display: none;
-  }
-
-  #body .mobile-display {
-    position: fixed;
-    z-index: 2;
-    padding: 2% 2% 0 2%;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    margin-bottom: 10%;
-    }
-    .mobile-display a {
-      color: rgb(243, 238, 233);
-    }
   }

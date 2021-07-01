@@ -4,7 +4,7 @@
   <!--  This is the head section where we add external resources and links  -->
   <head>
 
-    <title> Bevvy's Bakery </title>
+    <title> Betty's Bakery </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +14,8 @@
     <!-- Google fonts -- might use these for the cookie jar/bakery page --> 
     <!-- 300 - light, 400 - regular, 700- bold, 900 - black -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- this is the icon font, fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -25,44 +27,91 @@
   formbutton("create", {action: "https://formspree.io/f/xrgoweyq"})
 </script> -->
 
-    <!-- This adds jquery and smooth scrolling! -->
+    <!-- javascript -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="scripts.js"></script>
+
       <script>
-        function myFunction(x) {
-          x.classList.toggle("change");
-        }
-      </script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginRight = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginRight = "0";
+      }
+    </script>
 
       <style>
-        .container {
-          display: inline-block;
-          cursor: pointer;
-          position: fixed;
-          top: 20%;
-          right: 5%;
-        }
-        
-        .bar1, .bar2, .bar3 {
-          width: 35px;
-          height: 5px;
-          background-color: #333;
-          margin: 6px 0;
-          transition: 0.4s;
-        }
-        
-        .change .bar1 {
-          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-          transform: rotate(-45deg) translate(-9px, 6px);
-        }
-        
-        .change .bar2 {opacity: 0;}
-        
-        .change .bar3 {
-          -webkit-transform: rotate(45deg) translate(-8px, -8px);
-          transform: rotate(45deg) translate(-8px, -8px);
-        }
-        </style>
+       /* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #333; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: rgb(255, 165, 0);
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: relative;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  box-shadow: 1px 2px 2px 1px rgba(39, 27, 2, 0.575);
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  z-index: 2;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+ </style>
 
         <!-- This is our custom stylesheet, it always goes last -->
     <link href="style.css" rel="stylesheet">
@@ -73,33 +122,23 @@
   <!-- This is the main content of the page -->
   <body id="body">
 
-      <!-- this is our main header -->
-      <header class="grid">
-        <!--<nav class="col-3-middle left">
-          <a href="#about"> about </a>
-          <a href="#specials"> specials </a>
-        </nav>-->
-        <div class="col-6-middle centered">
-          <a href="/">
-            <h2 class="logo"> Bevvy's Bakery </h2>
-          </a>
-        </div>
-        <!--<nav class="col-3-middle right">
-          <a href="#location"> location </a>
-          <a href="#social"> socials </a>
-        </nav>-->
-      </header>
+    <div id="main">
+    <h2 class="logo"> Betty's Bakery</h2>
 
-      <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#body" onclick="closeNav()">to the top</a>
+      <a href="#about" onclick="closeNav()">About</a>
+      <a href="#specials" onclick="closeNav()">Specials</a>
+      <a href="#location" onclick="closeNav()">Location</a>
+      <a href="#social" onclick="closeNav()">Socials</a>
+    </div>
+    </div>
 
-
-      <!-- this is our intro banner section -->
+      <!-- this is the intro banner section -->
       
-      <section class="banner padded centered grid bg-bakery">
+      <section class="banner padded centered bg-bakery">
         <div class="col-12-middle">
         </div>
       </section>
@@ -187,7 +226,7 @@
 
       <!-- this is our location section -->
       
-      <section class="grid-left banner bg-wood" id="location">
+      <section class="grid-left banner2 bg-wood" id="location">
         <div class="col-6_sm-12-middle overlay padded">
           <h2 style="opacity: 1; color: rgb(39, 19, 1);"> Visit Us </h2>
           <p class="emphasis" style="opacity: 1; color: rgb(39, 19, 1);"> 
@@ -204,7 +243,7 @@
       <footer class="grid bg-dark" id="social">
         <!-- column -->
         <div class="col-5_sm-12 padded">
-          <h2 class="logo padded-mobile"> Bevvy's Bakery </h2>
+          <h2 class="logo padded-mobile"> Betty's Bakery </h2>
           <p class="padded-mobile"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
         <div class="col-1 sm-hidden"></div>
