@@ -265,9 +265,9 @@ height: auto;
     .center {
       text-align:left;
     }
-  
-    .mobile-hide {
-      display: none;
+
+    .mobile-left {
+      text-align: left;
     }
 
     .padded-mobile {
