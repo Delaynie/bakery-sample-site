@@ -108,6 +108,7 @@
     min-height: 60vh;
     color: rgb(253, 253, 253);
     opacity: .9;
+    z-index: 0;
   }
   
   /* This prevents the sections from having a blue outline when we click to them from the menu */
@@ -118,7 +119,7 @@
   }
  
   .logo {
-    padding: 2% 0 1% 5%;
+    padding: 2% 1% 2% 5%;
     text-transform: uppercase;
     border-bottom: 2px solid;
   }
